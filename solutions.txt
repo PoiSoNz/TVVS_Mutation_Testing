@@ -1,0 +1,28 @@
+TVVS – Mutation Testing Solutions
+
+Add the following code at the respective test function.
+
+test_func1: 
+	assertEquals(8, instance.func1(2, 3, 2));
+
+test_func2:
+	MutableInt b = new MutableInt(5);
+	instance.func2(b, 3, false, 2);
+	assertEquals(1, b.getInt());
+
+test_func3:
+	assertFalse(instance.func3(false, false, true));
+	assertTrue(instance.func3(false, true, true));
+
+test_func4:
+	assertEquals(648, instance.func2(10, 2, 7, 1000));
+
+test_func5: 
+	assertEquals(6, instance.func5(1, 5, 1, 2));
+	assertEquals(5, instance.func5(0, 5, 1, 2));
+
+test_fibonacci:
+	assertEquals(0, instance.nth_fibonacci_num(0));
+	assertEquals(1, instance.nth_fibonacci_num(2));
+	assertEquals(3, instance.nth_fibonacci_num(4));
+
